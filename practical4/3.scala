@@ -13,11 +13,17 @@
 }
 
 def toUpper(str: String): String = {
-    str.toUpperCase
+    str.map {
+      case a if a >= 'A' && a <= 'Z' => (a-32).toChar
+      case a => a
+    }
 }
 
 def toLower(str: String): String = {
-    str.toLowerCase
+    str.map {
+      case a if a >= 'A' && a <= 'Z' => (a+32).toChar
+      case a => a
+    } 
 }
 
 def formatNames(name: String)(formatter: String => String): String = {
