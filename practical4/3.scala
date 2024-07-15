@@ -6,6 +6,8 @@
   println(formattedName)
   }
 
+  println()
+
   names.foreach { name =>
   val formattedName = formatNames(name)(toLower)
   println(formattedName)
@@ -14,7 +16,7 @@
 
 def toUpper(str: String): String = {
     str.map {
-      case a if a >= 'A' && a <= 'Z' => (a-32).toChar
+      case a if a >= 'a' && a <= 'z' => (a-32).toChar
       case a => a
     }
 }
