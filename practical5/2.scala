@@ -7,12 +7,14 @@ var library: Set[Book] = Set()
   addBook("Buddha Hasam", "Susangala Buddhaaya", "9789553000025")
   addBook("Colamba Bihasa", "Neelawala Vijewala", "9789553034402")
   
-  isInLibrary("9789553000025")
-  removeBook("9789553000025")
-  isInLibrary("9789553000025")
   displayLibrary()
-  searchByTitle("Sihina Dahana")
-  displayBooksByAuthor("Neelawala Vijewala")
+  searchByTitle("Sihina dahana")
+ // isInLibrary("9789553000025")
+  //removeBook("9789553000025")
+ // isInLibrary("9789553000025")
+ // displayLibrary()
+ // searchByTitle("Sihina Dahana")
+ // displayBooksByAuthor("Neelawala Vijewala")
 }
 
 def addBook(title: String, author: String, isbn: String): Unit = {
