@@ -3,7 +3,8 @@ var inventory1 = Map(
   "123D" -> Item("Apple", 12, 32.50), 
   "124D" -> Item("Orange", 33, 12.50), 
   "125D" -> Item("Banana", 43, 42.50),
-  "126D" -> Item("Papaya", 18, 172.50))
+  "126D" -> Item("Papaya", 18, 172.50),
+  "130D" -> Item("Avacado", 5, 20))
 
 var inventory2 = Map(
   "123D" -> Item("Apple", 42, 132.50),
@@ -15,17 +16,18 @@ var inventory2 = Map(
 @main def main(): Unit = {  
   getProductNames()
   calculateTotalValue()
-  mergeInventories()
-  findProduct("125D")
+ // mergeInventories()
+  findProduct("130D")
 }
 
 def getProductNames(): Unit = {
   inventory1.values.foreach(i => println(i.name))
+  inventory2.values.foreach(i => println(i.name))
 }
 
 def calculateTotalValue(): Unit = {
   val total = inventory1.values.map(item => item.quantity * item.price).sum
-  println(s"Total value of inventory2 is: $total")
+  println(s"Total value of inventory1 is: $total")
 }
 
 def mergeInventories(): Unit = {
